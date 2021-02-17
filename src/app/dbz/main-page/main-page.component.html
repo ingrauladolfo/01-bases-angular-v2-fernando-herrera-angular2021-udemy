@@ -1,0 +1,28 @@
+<!-- <p>main-page works!</p> -->
+<h1>Dragon Ball Z</h1>
+<hr>
+<div class="row">
+    <div class="col">
+        <h3>Personajes</h3>
+        <hr>
+        <ul>
+            <li>Krilin - 700</li>
+            <li>Goku - 15000</li>
+            <li>Vegeta - 8500</li>
+        </ul>
+    </div>
+    <div class="col">
+        <h3>
+            Agregar <small>{{nuevo.nombre}} - {{nuevo.poder}}</small>
+        </h3>
+        <hr>
+        <form (ngSubmit)="agregarPersonajes()">
+            <input name="nombre" [(ngModel)]="nuevo.nombre"   type="text" placeholder='Nombre'>
+            <input name="poder" [(ngModel)]="nuevo.poder"  type="number" placeholder='Poder'>
+            <button type='submit'>Agregar</button>
+        </form>
+        
+    </div>
+</div>
+
+<!-- [value]='nuevo.nombre' (input)="cambiarNombre($event)" -->
